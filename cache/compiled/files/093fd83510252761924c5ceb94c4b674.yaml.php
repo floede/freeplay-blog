@@ -2,10 +2,10 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/janus/Documents/www/Github/freeplay-blog/user/config/site.yaml',
-    'modified' => 1487333498,
+    'modified' => 1488448978,
     'data' => [
-        'title' => 'Receptar',
-        'description' => 'A very delicious blog.',
+        'title' => 'Freeplay Community',
+        'description' => 'We talk about games',
         'author' => [
             'name' => 'Grav',
             'email' => 'joe@test.com',

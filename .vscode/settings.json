@@ -1,0 +1,35 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "deploy": {
+        "packages": [
+            {
+                "name": "Version 0.0.1",
+                "description": "Package version 0.0.1",
+                "files": [
+                    "**/*.php",
+                    "/*.json"
+                ],
+                "exclude": [
+                    "tests/**",
+                    ".vscode/**",
+                    "cache/**"
+                ],
+                "deployOnSave": false
+            }
+        ],
+
+        "targets": [
+            {
+                "type": "sftp",
+                "name": "Digital Ocean Droplet",
+                "description": "Digital Ocean Droplet",
+                "dir": "/my_package_files",
+                //"host": "146.185.141.108",
+                "host": "freeplay.prod",
+                "user": "root",
+                "privatekey": "/.ssh/id_rsa"
+            }
+        ]
+    }
+}
+

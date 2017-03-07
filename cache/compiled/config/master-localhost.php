@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1488320138,
-    'checksum' => '0903ab258dce6eac44b4a1588e5271a8',
+    'timestamp' => 1488450030,
+    'checksum' => '7951d0cb762a67c85aed0db86a61995a',
     'files' => [
         'user/config' => [
             'media' => [
@@ -35,7 +35,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1487333498
+                'modified' => 1488450030
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -43,7 +43,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1488320005
+                'modified' => 1488449899
             ]
         ],
         'system/config' => [
@@ -734,23 +734,23 @@ return [
             ]
         ],
         'site' => [
-            'title' => 'Receptar',
+            'title' => 'Freeplay Community',
             'default_lang' => 'en',
             'author' => [
-                'name' => 'Grav',
-                'email' => 'joe@test.com',
+                'name' => 'Freeplay',
+                'email' => 'red@freeplay.co',
                 'url' => 'http://getgrav.org/',
-                'logo' => NULL,
                 'gravatar' => 'contact@getgrav.org',
                 'description' => 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.'
             ],
             'taxonomies' => [
-                0 => 'category',
-                1 => 'tag',
-                2 => 'month'
+                0 => 'tag',
+                1 => 'game',
+                2 => 'name',
+                3 => 'company'
             ],
             'metadata' => [
-                'description' => 'Receptar is a minimal Theme designed for blogger, converted to Grav.'
+                'description' => 'A community where we talk about games'
             ],
             'summary' => [
                 'enabled' => true,
@@ -764,7 +764,7 @@ return [
             'blog' => [
                 'route' => ''
             ],
-            'description' => 'A very delicious blog.',
+            'description' => 'We talk about games',
             'global_featured_image' => 'featured.jpg',
             'social' => [
                 0 => [
@@ -852,19 +852,7 @@ return [
             'languages' => [
                 'supported' => [
                     0 => 'en',
-                    1 => 'de',
-                    2 => 'es',
-                    3 => 'cs',
-                    4 => 'fi',
-                    5 => 'fr',
-                    6 => 'it',
-                    7 => 'nb',
-                    8 => 'nl',
-                    9 => 'el',
-                    10 => 'pt',
-                    11 => 'ro',
-                    12 => 'ru',
-                    13 => 'pl'
+                    1 => 'da'
                 ],
                 'include_default_lang' => true,
                 'translations' => true,
@@ -882,7 +870,7 @@ return [
                 'hide_in_urls' => false
             ],
             'pages' => [
-                'theme' => 'receptar',
+                'theme' => 'masonry',
                 'order' => [
                     'by' => 'default',
                     'dir' => 'asc'
@@ -931,7 +919,7 @@ return [
                 'etag' => false,
                 'vary_accept_encoding' => false,
                 'redirect_default_route' => false,
-                'redirect_default_code' => 301,
+                'redirect_default_code' => '301',
                 'redirect_trailing_slash' => true,
                 'ignore_files' => [
                     0 => '.DS_Store'
@@ -991,7 +979,7 @@ return [
                 ]
             ],
             'errors' => [
-                'display' => 0,
+                'display' => '0',
                 'log' => true
             ],
             'debugger' => [
