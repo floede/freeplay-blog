@@ -1,45 +1,53 @@
-title: Mediator
-description: A Grav theme - Medium inspired
-taxonomies: [tag, featured]
+title: 'Freeplay Community'
+default_lang: en
+author:
+  name: 'Freeplay staff'
+  email: staff@freeplay.com
+  image: /user/images/avatar.jpg
+  bio: 'I''m a blogger and a Grav-lover'
+taxonomies:
+  - game
+  - company
+  - person
 metadata:
-    description: Grav is an easy to use, yet powerful, open source flat-file CMS
-
+  description: 'Freeplay - we talk about games'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog
+description: 'We talk about games'
 logo: /user/images/logo.jpg
-
 date_long: 'd F Y'
 date_short: 'd M Y'
-
-author:
-    name: Bill Bloggs
-    email: a-mail@mail.mail
-    image: /user/images/avatar.jpg
-    bio: I'm a blogger and a Grav-lover
-
 social:
-    - icon: twitter
-      url: https://twitter.com/getgrav
-      desc: Follow me on twitter
-      share_url: http://twitter.com/share
-      share_title: ?text=
-      share_link: "&amp;url="
-
-    - icon:  facebook
-      url:   https://facebook.com/???
-      desc: Connect with me facebook
-      share_url: //www.facebook.com/sharer.php
-      share_title: ?t=
-      share_link: "&amp;u="
-
-    - icon: github
-      url: https://github.com/getgrav
-      desc: Fork me on github
-      share_url:
-      share_title:
-      share_link:
-
-    - icon:  google-plus
-      url:   https://google.com/???
-      desc:  Add me on google+
-      share_url:
-      share_title:
-      share_link:
+  -
+    icon: twitter
+    url: 'https://twitter.com/getgrav'
+    desc: 'Follow me on twitter'
+    share_url: 'http://twitter.com/share'
+    share_title: '?text='
+    share_link: '&amp;url='
+  -
+    icon: facebook
+    url: 'https://facebook.com/???'
+    desc: 'Connect with me facebook'
+    share_url: //www.facebook.com/sharer.php
+    share_title: '?t='
+    share_link: '&amp;u='
+  -
+    icon: github
+    url: 'https://github.com/getgrav'
+    desc: 'Fork me on github'
+    share_url: null
+    share_title: null
+    share_link: null
+  -
+    icon: google-plus
+    url: 'https://google.com/???'
+    desc: 'Add me on google+'
+    share_url: null
+    share_title: null
+    share_link: null
