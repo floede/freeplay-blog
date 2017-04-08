@@ -1,3 +1,5 @@
+enabled: true
+
 provider: ""
 providers:
   disqus:

@@ -8,4 +8,4 @@ access:
     super: true
   site:
     login: true
-hashed_password: $2y$10$6LfLrixYm/zu/CAylB4tFeMoiT2CDEQWz7FOmk78wtCDU3m5A1sq.
+hashed_password: $2y$10$i/7.e7tWy8933woREniXTe16SOcYO0t6zhntyBjnjwi3pYoY0wGKO
