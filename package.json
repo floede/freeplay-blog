@@ -1,0 +1,19 @@
+{
+  "name": "freeplay-blog",
+  "version": "1.0.0",
+  "description": "A blog and news platform for the Freeplay Community",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/floede/freeplay-blog.git"
+  },
+  "author": "Janus Hasseriis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/floede/freeplay-blog/issues"
+  },
+  "homepage": "https://github.com/floede/freeplay-blog#readme"
+}

@@ -1,35 +1,23 @@
-# Receptar Skeleton for Grav
+# Mediator Origins
 
-![Receptar](assets/readme_1.png)
+The Mediator theme for Grav is a direct port of the [Mediator Theme for Jekyll](https://github.com/dirkfabisch/mediator) designed by [Dirk Fabisch](http://blog.base68.com/about/) which in turn was inspired by the [Readium 2.0 Theme for Ghost](http://www.svenread.com/readium-ghost-theme/).
 
-Receptar is simple, modern, responsive, high-DPI, fully customizable, stylish blog Grav theme by [WebMan Design](http://themedemos.webmandesign.eu/).
-It features split-screen book-like design inspired by a modern cook book with emphasize on beautiful imagery and typography.
+A couple of minor tweaks and adjustments have been made to better take advantage of Grav features and functionality.
 
 # Features
 
-* Navigation menu included
-* Split-screen book-like design
-* Collapsible sidebar
-* Blog Layout with support for recipes
-* Beautiful imagery and typography.
-* Social Sharing
-* Browser Compatibility
-* Supports YouTube
-* Supports SoundCloud
-* Supports Vimeo
-* SimpleSearch support
-* Feeds
-* RelatedPosts plugin support
-* Archives plugin support
-* JSComments plugin support
-* Comments and Forms plugin support
-* Basic translations for 14 languages
+* Fully Responsive layout
+* Use header images in articles, if you want to (add tag "image" and url to the image in the front matter section of a post)
+* Minimal design
+* Featured article support
+* FontAwesome implemented for easy use of icons fonts
+* Free & Open Source Font usage
 
 ## Basic Setup for a new Grav site
 
-The simplest way to install Receptar theme for Grav is to download and install the Receptar Skeleton package:
+The simplest way to install Mediator theme for Grav is to download and install the Mediator Skeleton package:
 
-1. [Download Receptar Skeleton](http://getgrav.org/downloads/skeletons#extras)
+1. [Download Mediator Skeleton](http://getgrav.org/downloads/skeletons#extras)
 2. Simply unzip the package into your web root folder.
 3. Point your browser at the folder, job done!
 
@@ -39,99 +27,115 @@ The simplest way to install Receptar theme for Grav is to download and install t
 
 ## Existing Grav site
 
-It is possible to install just the theme, but page content will need to reference the [Receptar theme](https://github.com/getgrav/grav-theme-receptar)'s supported templates.  It is strongly advised to at least install the Receptar Skeleton package to see the theme's capabilities in action.
+It is possible to install just the theme, but page content will need to reference the Mediator theme's supported templates.  It is strongly advised to at least install the Mediator Skeleton package to see the theme's capabilities in action.
 
 To install  **just** the theme:
 
 ```
-$ bin/gpm install receptar
+$ bin/gpm install mediator
 ```
+
 ---
 
-## Configuration
+## Advanced GitHub-based installation
 
-In Receptar, you have few unique features which you can configure easily:
+1. Download and install [Grav](https://github.com/getgrav/grav)
+2. Create a new sandbox site with: `bin/grav sandbox ~/public_html/mediator`
+3. Clone this repo into the `mediator` folder as `user`: `git clone: https://github.com/getgrav/grav-skeleton-mediator-site ~/public_html/mediator/user`
+4. Install the plugin and theme dependencies: `bin/grav install`
 
-### Translations
+# Configuration
 
-Take a look at theme's **language.yaml**. Polish and English versions contains all variables which you can translate to your language.
+Most of the configuration of the theme is done in the `user/config/site.yaml` file:
 
-### Adding recipes to blog page
+```
+title: Mediator
+description: A Grav theme - Medium inspired
+taxonomies: [tag, featured]
+metadata:
+    description: Grav is an easy to use, yet powerful, open source flat-file CMS
 
-In item.md page header you have to add something like that:
+logo: /user/images/logo.jpg
 
-```yaml
-ingredients_title: Ingredients
-ingredients:
-  - title: Corpus:
-    list:
-      - Lorem ipsum, 200g
-      - Dolor sit amet 20dl
-      - 80g sugar
-      - 1 yolk
-      - Salt
-      - Water 0.5l
-      - Milk 1l
-  - title: Corpus:
-    list:
-      - Lorem ipsum, 200g
-      - Dolor sit amet 20dl
-      - 80g sugar
-      - 1 yolk
-      - Salt
-      - Water 0.5l
-      - Milk 1l
+date_long: 'd F Y'
+date_short: 'd M Y'
+
+author:
+    name: Bill Bloggs
+    email: a-mail@mail.mail
+    image: /user/images/avatar.jpg
+    bio: I'm a blogger and a Grav-lover
+
+social:
+    - icon: twitter
+      url: https://twitter.com/getgrav
+      desc: Follow me on twitter
+      share_url: http://twitter.com/share
+      share_title: ?text=
+      share_link: "&amp;url="
+
+    - icon:  facebook
+      url:   https://facebook.com/???
+      desc: Connect with me facebook
+      share_url: //www.facebook.com/sharer.php
+      share_title: ?t=
+      share_link: "&amp;u="
+
+    - icon: github
+      url: https://github.com/getgrav
+      desc: Fork me on github
+      share_url:
+      share_title:
+      share_link:
+
+    - icon:  google-plus
+      url:   https://google.com/???
+      desc:  Add me on google+
+      share_url:
+      share_title:
+      share_link:
 ```
 
-### Adding advanced description
+Main settings for the site
 
-Add code like that to page header:
+* **title**: name of your site
+* **description**: description of your site
 
-```yaml
-description:
-  - option: Dificulty:
-    value: simple
-  - option: Serving:
-    value: 4
-  - option: Preparation time:
-    value: 1 hour 30 minutes
-  - option: What we need:
-    value: oven, tart form, jar
+* **logo**: small logo for the site (300x * 300x)
+* **long date**: date used in the `default` listing page
+* **short date**: date used in the `post` details page
+
+* **author name**: name site owner
+* **author email**: mail address of the site owner
+* **author image**: small image of author (300x * 300px)
+* **author bio**: short one sentence biography
+
+### Social
+
+The template allows to add all major social platforms to your site.
+Fill the the form for each platform. If you leave the share_* entries empty, the sharing buttons below a post are not shown.  If you leave the **url** and **desc** empty the icons are not shown on the index page, but the share icons on the article pages remains untouched (Thanks to [Phil](https://github.com/philsturgeon))
+
+* **icon**: name of social platform (must match a name of [font-awsome](http://fortawesome.github.io/Font-Awesome/) icon set )
+* **url**:  url of your account
+* **desc**: slogan of the platform
+* **share_url**: share url
+* **share_title**: first part of url for the title
+* **share_link**: second part of the share url for the link to the post
+
+The Twig template engine will magical combine the different parts to a share url.
+
 ```
+http://twitter.com/share?text=post_title&amp;url=post_url
+````
 
-### Adding video and SoundCloud
+# Supported Page Types
 
-You have to add direct iframe url to page header. For example for Vimeo files, it's going to be:
+The Mediator theme supports 3 page types via templates:
 
-```yaml
-vimeo: https://player.vimeo.com/video/63451562?title=0&amp;byline=0&amp;portrait=0
-```
+* **default**: the template used to display the default blog listing view
+* **post**: a full page of the blog post
+* **page**: similar to the post, but without author information or reading-time
 
-### Slideshow
+# Licensing
 
-Add or modify this code in site.yaml:
-
-```yaml
-slider:
-  - image: slide3.jpg
-    title: A very delicious blog
-    url: "#"
-  - image: slide1.jpg
-    title: Duis autem
-    url: "#"
-  - image: slide2.jpg
-    title: Pumpkin recipe
-    url: "#"
-```
-
-Slideshow images must be placed inside user theme **images/slideshow** directory.
-
-### Featured image
-
-To customize featured image, add or modify following variable in site.yaml:
-
-```yaml
-global_featured_image: featured.jpg
-```
-
-Featured images must be placed inside user theme **images** directory. Featured images is used on empty blog image posts and on posts without image (due to split-screen layout concept).
+[MIT](https://github.com/dirkfabisch/madiator/blob/master/LICENSE) with no added caveats, so feel free to use this on your site without linking back to me or using a disclaimer or anything silly like that.

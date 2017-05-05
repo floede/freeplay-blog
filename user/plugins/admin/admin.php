@@ -88,6 +88,7 @@ class AdminPlugin extends Plugin
                 'onShutdown'           => ['onShutdown', 1000],
                 'onFormProcessed'      => ['onFormProcessed', 0],
                 'onAdminDashboard'     => ['onAdminDashboard', 0],
+                'onAdminTools'         => ['onAdminTools', 0],
             ];
         }
 
@@ -388,16 +389,16 @@ class AdminPlugin extends Plugin
         // Replace page service with admin.
         $this->grav['page'] = function () use ($self) {
             $page = new Page;
+            $page->expires(0);
 
-            // If the page cannot be found in other plugins, try looking in admin plugin itself.
+            // First look in the pages provided by the Admin plugin itself
             if (file_exists(__DIR__ . "/pages/admin/{$self->template}.md")) {
                 $page->init(new \SplFileInfo(__DIR__ . "/pages/admin/{$self->template}.md"));
                 $page->slug(basename($self->template));
-
                 return $page;
             }
 
-            // Allows pages added by plugins in admin
+            // If not provided by Admin, lookup pages added by other plugins
             $plugins = $this->grav['plugins'];
             $locator = $this->grav['locator'];
 
@@ -647,7 +648,7 @@ class AdminPlugin extends Plugin
             'DROP_FILES_HERE_TO_UPLOAD',
             'DELETE',
             'INSERT',
-            'UNDO',
+            'VIEW',
             'UNDO',
             'REDO',
             'HEADERS',
@@ -723,6 +724,17 @@ class AdminPlugin extends Plugin
         }
 
         return false;
+    }
+
+    /**
+     * Provide the tools for the Tools page, currently only direct install
+     *
+     * @return Event
+     */
+    public function onAdminTools(Event $event)
+    {
+        $event['tools'] = array_merge($event['tools'], [$this->grav['language']->translate('PLUGIN_ADMIN.DIRECT_INSTALL')]);
+        return $event;
     }
 
     public function onAdminDashboard()
