@@ -19,7 +19,7 @@ summary:
 blog:
   route: /blog
 description: 'We talk about games'
-logo: /user/images/logo.jpg
+logo: freeplay-logo.png
 date_long: 'd F Y'
 date_short: 'd M Y'
 social:

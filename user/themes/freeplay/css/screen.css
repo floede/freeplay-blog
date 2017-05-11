@@ -78,6 +78,9 @@ table th, table td {
   orphans: 1;
   widows: 1; }
 
+.home-template .page-title {
+  text-shadow: 1px 1px 11px #000; }
+
 article {
   display: none; }
 

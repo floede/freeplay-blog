@@ -6,6 +6,14 @@ assets/*
 logs/*
 images/*
 user/data/*
+system/*
+vendor/*
+backup/*
+bin/*
+system/*
+tmp/*
+webserver-configs/*
+
 
 # OS Generated
 .DS_Store*
@@ -13,3 +21,7 @@ ehthumbs.db
 Icon?
 Thumbs.db
 *.swp
+
+CHANGELOG.md
+
+
