@@ -6,6 +6,7 @@ assets/*
 logs/*
 images/*
 user/data/*
+user/accounts/*
 system/*
 vendor/*
 backup/*
@@ -23,5 +24,4 @@ Thumbs.db
 *.swp
 
 CHANGELOG.md
-
 
