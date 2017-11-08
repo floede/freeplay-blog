@@ -74,6 +74,9 @@ table th, table td {
   transform: scale(1.5);
   opacity: 0.7; }
 
+article {
+  display: block; }
+
 .masonry {
   orphans: 1;
   widows: 1; }
@@ -82,9 +85,6 @@ table th, table td {
   text-shadow: 1px 1px 11px #000; }
 
 input#show-menu {
-  display: none; }
-
-article {
   display: none; }
 
 aside {

@@ -4,7 +4,9 @@
   "description": "A blog and news platform for the Freeplay Community",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "php -S localhost:8000 system/router.php;",
+    "scss": "scss --load-path user/themes/masonry/src/scss --watch user/themes/freeplay/scss:user/themes/freeplay/css"
   },
   "repository": {
     "type": "git",

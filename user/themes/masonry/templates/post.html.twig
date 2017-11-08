@@ -12,6 +12,7 @@
     <article class="post">
         <header class="post-header">
             {% include 'partials/breadcrumbs.html.twig' %}
+            {{ dump(page.title) }}
             <h1 class="post-title">{{page.title}}</h1>
             <section class="post-meta">
                <time class="post-date" datetime="{{ page.date | date(site.date_short) }}">{{ page.date | date(site.date_short) }}</time>
